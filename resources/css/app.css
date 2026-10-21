@@ -1,0 +1,1205 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg-deep: #090a0b;
+  --color-bg-card: #121316;
+  --color-bg-light: #faf8f5;
+  --color-text-main: #f5f2eb;
+  --color-text-muted: #a39e93;
+  --color-accent-gold: #c5a880;
+  --color-accent-gold-light: #e5cb9f;
+  --color-accent-gold-dark: #8c7352;
+  --color-border: rgba(197, 168, 128, 0.16);
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Light Theme Variables & Luxury Styling */
+html.light {
+  --color-bg-deep: #f7f5f0;
+  --color-bg-card: #ffffff;
+  --color-bg-light: #ffffff;
+  --color-text-main: #1c1917;
+  --color-text-muted: #575249;
+  --color-accent-gold: #8f6a35;
+  --color-accent-gold-light: #7d5e32;
+  --color-accent-gold-dark: #634720;
+  --color-border: rgba(143, 106, 53, 0.22);
+  --color-border-subtle: rgba(0, 0, 0, 0.08);
+  background-color: #f7f5f0;
+  color: #1c1917;
+}
+
+html.light body {
+  background-color: #f7f5f0;
+  color: #1c1917;
+}
+
+/* Light Theme Component Overrides */
+html.light .glass-panel {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(143, 106, 53, 0.22);
+  color: #1c1917;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
+}
+
+html.light .glass-nav {
+  background: rgba(247, 245, 240, 0.94);
+  border-bottom-color: rgba(143, 106, 53, 0.2);
+}
+
+html.light .gold-gradient-text {
+  background: linear-gradient(135deg, #1c1917 0%, #7d5e32 45%, #9e783e 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+html.light footer {
+  background-color: #ede8df !important;
+  color: #38342e !important;
+  border-top-color: rgba(143, 106, 53, 0.22) !important;
+}
+
+html.light footer h4,
+html.light footer .font-serif.text-3xl {
+  color: #1c1917 !important;
+}
+
+html.light footer p,
+html.light footer li a {
+  color: #38342e !important;
+}
+
+html.light footer li a:hover {
+  color: #8f6a35 !important;
+}
+
+html.light footer .text-\[\#c5a880\] {
+  color: #8f6a35 !important;
+}
+
+html.light footer input {
+  background-color: #ffffff !important;
+  color: #1c1917 !important;
+  border-color: rgba(143, 106, 53, 0.3) !important;
+}
+
+/* Light Theme Backgrounds */
+html.light .bg-\[\#08090a\],
+html.light .bg-\[\#090a0b\],
+html.light .bg-\[\#0a0b0d\],
+html.light .bg-\[\#0a0c0e\],
+html.light .bg-\[\#0c0d0f\],
+html.light .bg-\[\#0c0d10\],
+html.light .bg-\[\#0e1013\],
+html.light .bg-\[\#0e1014\] {
+  background-color: #f7f5f0 !important;
+}
+
+html.light .bg-\[\#101216\],
+html.light .bg-\[\#101217\],
+html.light .bg-\[\#111317\],
+html.light .bg-\[\#121316\],
+html.light .bg-\[\#121418\],
+html.light .bg-\[\#121418\]\/80,
+html.light .bg-\[\#12141a\],
+html.light .bg-\[\#131418\],
+html.light .bg-\[\#131519\],
+html.light .bg-\[\#13151a\],
+html.light .bg-\[\#14161b\],
+html.light .bg-\[\#14161d\],
+html.light .bg-\[\#16181f\],
+html.light .bg-\[\#171920\],
+html.light .bg-\[\#18191c\],
+html.light .bg-\[\#181a20\],
+html.light .bg-\[\#1a1c22\],
+html.light .bg-\[\#1c1e24\],
+html.light .bg-\[\#252830\] {
+  background-color: #ffffff !important;
+  color: #1c1917 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* Light Theme Typography: Headings & High Contrast Text */
+html.light .text-\[\#faf6ed\],
+html.light .text-\[\#f5f2eb\],
+html.light .text-\[\#faf7f0\],
+html.light .text-\[\#f4efe4\],
+html.light .text-\[\#f3efe6\],
+html.light .text-\[\#ece7dd\],
+html.light .text-\[\#e8e4de\],
+html.light .text-\[\#d8d3c7\],
+html.light .text-\[\#d4cfc5\],
+html.light .text-\[\#d4cebf\],
+html.light .text-\[\#d1cbc0\] {
+  color: #1c1917 !important;
+}
+
+/* Light Theme Typography: Muted / Subtitle / Paragraph Text */
+html.light .text-\[\#b8b3a7\],
+html.light .text-\[\#ada79b\],
+html.light .text-\[\#a8a296\],
+html.light .text-\[\#a39e93\],
+html.light .text-\[\#9e988c\],
+html.light .text-\[\#9c968a\],
+html.light .text-\[\#9a9488\],
+html.light .text-\[\#948f83\],
+html.light .text-\[\#8f897e\],
+html.light .text-\[\#8e897e\],
+html.light .text-\[\#8c867a\],
+html.light .text-\[\#8a857b\],
+html.light .text-\[\#736e65\],
+html.light .text-\[\#6e685f\] {
+  color: #575249 !important;
+}
+
+/* Light Theme Typography: Gold Accents & Badges */
+html.light .text-\[\#c5a880\],
+html.light .text-\[\#dfc298\],
+html.light .text-\[\#dfcaa7\],
+html.light .text-\[\#e5cb9f\] {
+  color: #8f6a35 !important;
+}
+
+/* Light Theme Borders */
+html.light .border-white\/5,
+html.light .border-white\/10,
+html.light .border-white\/15,
+html.light .border-white\/20,
+html.light .border-white\/25,
+html.light .border-white\/30 {
+  border-color: rgba(143, 106, 53, 0.2) !important;
+}
+
+/* Light Theme Soft Image Bottom Gradients (Secondary Pages Only) */
+html.light .hero-stage-exclude .from-\[\#090a0b\] {
+  --tw-gradient-from: #f7f5f0 var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(247 245 240 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+html.light .from-\[\#0c0d10\] {
+  --tw-gradient-from: #f0ece3 var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(240 236 227 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+/* Hero Section MUST Remain 100% Dark & Cinematic in BOTH Themes */
+html.light #hero,
+html.light .hero-scroll-container,
+html.light .hero-sticky-stage {
+  background-color: #000000 !important;
+}
+
+html.light #hero .hero-hud-pill,
+html.light #hero .glass-panel {
+  background: rgba(10, 11, 13, 0.85) !important;
+  border-color: rgba(197, 168, 128, 0.45) !important;
+  color: #faf6ed !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+html.light #hero .hero-hud-pill span,
+html.light #hero .glass-panel span {
+  color: #faf6ed !important;
+}
+
+html.light #hero .from-\[\#090a0b\] {
+  --tw-gradient-from: #090a0b var(--tw-gradient-from-position) !important;
+  --tw-gradient-to: rgb(9 10 11 / 0) var(--tw-gradient-to-position) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+html.light #hero .to-\[\#090a0b\] {
+  --tw-gradient-to: #090a0b var(--tw-gradient-to-position) !important;
+}
+
+html.light #hero .text-\[\#faf7f0\],
+html.light #hero .text-\[\#f5f2eb\],
+html.light #hero .text-\[\#faf6ed\] {
+  color: #faf7f0 !important;
+}
+
+html.light #hero .text-\[\#d4cfc5\],
+html.light #hero p.text-\[\#d4cfc5\] {
+  color: #d4cfc5 !important;
+}
+
+html.light #hero .text-\[\#f4efe4\],
+html.light #hero span.text-\[\#f4efe4\] {
+  color: #f4efe4 !important;
+}
+
+html.light #hero .text-\[\#dfc298\],
+html.light #hero .text-\[\#c5a880\] {
+  color: #dfc298 !important;
+}
+
+html.light #hero .text-\[\#ada79b\],
+html.light #hero .text-\[\#a39e93\],
+html.light #hero .text-\[\#8e897e\],
+html.light #hero .text-\[\#a8a296\],
+html.light #hero .text-\[\#8a857b\] {
+  color: #a8a296 !important;
+}
+
+html.light #hero .gold-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #edd8b7 40%, #c5a880 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+html.light #hero .luxury-btn-outline {
+  color: #f3efe6 !important;
+  border-color: rgba(243, 239, 230, 0.3) !important;
+}
+
+html.light #hero .luxury-btn-outline:hover {
+  border-color: #c5a880 !important;
+  color: #c5a880 !important;
+  background: rgba(197, 168, 128, 0.08) !important;
+}
+
+/* Header Top (Transparent Over Dark Hero / Dark Banner) */
+/* Spa Reveal Cards - Crisp Contrast in BOTH Themes */
+.spa-reveal-card {
+  position: relative;
+  background-color: #0c0d10 !important;
+}
+
+html.light .spa-reveal-card {
+  background-color: #121316 !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Card titles */
+html.light .spa-reveal-card .reveal-title,
+html.dark .spa-reveal-card .reveal-title,
+.spa-reveal-card .reveal-title {
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Card eyebrows & notes */
+html.light .spa-reveal-card .reveal-eyebrow,
+html.dark .spa-reveal-card .reveal-eyebrow,
+.spa-reveal-card .reveal-eyebrow {
+  color: #dfc298 !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Card metrics / pills */
+html.light .spa-reveal-card .reveal-metric,
+html.dark .spa-reveal-card .reveal-metric,
+.spa-reveal-card .reveal-metric {
+  color: #ffffff !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* Card description */
+html.light .spa-reveal-card .reveal-desc,
+html.dark .spa-reveal-card .reveal-desc,
+.spa-reveal-card .reveal-desc {
+  color: #d8d3c7 !important;
+}
+
+/* Hover hint text */
+html.light .spa-reveal-card .reveal-hint,
+html.dark .spa-reveal-card .reveal-hint,
+.spa-reveal-card .reveal-hint {
+  color: #dfc298 !important;
+}
+
+/* Top Specification box in hover state */
+html.light .spa-reveal-card .reveal-top-box,
+html.dark .spa-reveal-card .reveal-top-box,
+.spa-reveal-card .reveal-top-box {
+  background-color: #08090c !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+/* Bottom Action box in hover state */
+html.light .spa-reveal-card .reveal-action-box,
+html.dark .spa-reveal-card .reveal-action-box,
+.spa-reveal-card .reveal-action-box {
+  background-color: #faf7f0 !important;
+  color: #090a0b !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.light .spa-reveal-card .reveal-action-box *,
+html.dark .spa-reveal-card .reveal-action-box *,
+.spa-reveal-card .reveal-action-box * {
+  color: #090a0b !important;
+}
+
+html.light .spa-reveal-card .reveal-action-box:hover,
+html.dark .spa-reveal-card .reveal-action-box:hover,
+.spa-reveal-card .reveal-action-box:hover {
+  background-color: #c5a880 !important;
+}
+
+html.light .spa-reveal-card .reveal-action-box:hover *,
+html.dark .spa-reveal-card .reveal-action-box:hover *,
+.spa-reveal-card .reveal-action-box:hover * {
+  color: #090a0b !important;
+}
+html.light header.header-top .header-tab-link,
+html.light header:not(.header-scrolled) .header-tab-link {
+  color: #f5f2eb !important;
+}
+
+html.light header.header-top .header-tab-link:hover,
+html.light header:not(.header-scrolled) .header-tab-link:hover {
+  color: #e5cb9f !important;
+  text-shadow: 0 0 10px rgba(229, 203, 159, 0.4);
+}
+
+html.light header.header-top .header-brand-sub,
+html.light header:not(.header-scrolled) .header-brand-sub {
+  color: #e5cb9f !important;
+  opacity: 1 !important;
+}
+
+/* Header Scrolled (Light Frosted Navbar) */
+html.light header.header-scrolled .header-tab-link {
+  color: #1c1917 !important;
+  font-weight: 600 !important;
+}
+
+html.light header.header-scrolled .header-tab-link:hover {
+  color: #8f6a35 !important;
+}
+
+html.light header.header-scrolled .header-brand-sub {
+  color: #1c1917 !important;
+  font-weight: 600 !important;
+  opacity: 1 !important;
+}
+
+/* InteractiveHoverButton label styling */
+html.light .interactive-btn-label {
+  color: #1c1917 !important;
+}
+html.light button.group:hover .interactive-btn-label {
+  color: #090a0b !important;
+}
+
+/* Luxury Outline Button in Light Theme */
+html.light .luxury-btn-outline {
+  color: #1c1917 !important;
+  border-color: rgba(143, 106, 53, 0.45) !important;
+  background: transparent !important;
+}
+
+html.light .luxury-btn-outline:hover {
+  border-color: #8f6a35 !important;
+  color: #8f6a35 !important;
+  background: rgba(143, 106, 53, 0.08) !important;
+}
+
+/* Parallax Editorial Text Over Dark Images - ALWAYS Luminous */
+.parallax-editorial-copy h2,
+html.light .parallax-editorial-copy h2 {
+  color: #faf6ed !important;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.85) !important;
+}
+
+.parallax-editorial-copy p,
+html.light .parallax-editorial-copy p {
+  color: #dfc298 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85) !important;
+}
+
+.parallax-editorial-copy .parallax-eyebrow,
+html.light .parallax-editorial-copy .parallax-eyebrow {
+  color: #dfc298 !important;
+  background-color: rgba(10, 11, 13, 0.85) !important;
+  border-color: rgba(197, 168, 128, 0.4) !important;
+}
+
+/* Gallery & Carousel Image Overlay Captions - ALWAYS Luminous in BOTH Themes */
+.carousel-image-caption h3,
+html.light .carousel-image-caption h3,
+.gallery-caption-overlay h3,
+html.light .gallery-caption-overlay h3,
+.lightbox-caption h3,
+html.light .lightbox-caption h3,
+.image-ring-caption h4,
+html.light .image-ring-caption h4 {
+  color: #faf6ed !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95) !important;
+}
+
+.carousel-image-caption p,
+html.light .carousel-image-caption p,
+.gallery-caption-overlay p,
+html.light .gallery-caption-overlay p,
+.lightbox-caption p,
+html.light .lightbox-caption p,
+.image-ring-caption p,
+html.light .image-ring-caption p {
+  color: #e8e2d5 !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.95) !important;
+}
+
+.image-ring-caption span,
+html.light .image-ring-caption span {
+  color: #dfc298 !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Light Theme Form Controls */
+html.light input,
+html.light textarea,
+html.light select {
+  background-color: #ffffff !important;
+  color: #1c1917 !important;
+  border-color: rgba(143, 106, 53, 0.25) !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #8c8579 !important;
+}
+
+/* Ensure text inside dark badges and over dark image overlays remains crisp and radiant in both themes */
+html.light [class*="bg-black/"] {
+  color: #faf6ed !important;
+}
+html.light [class*="bg-black/"] * {
+  color: #faf6ed !important;
+}
+html.light [class*="bg-black/"] .text-\[\#c5a880\],
+html.light [class*="bg-black/"] [class*="text-\[\#c5a880\]"] {
+  color: #e5cb9f !important;
+}
+
+html.light .dark-card-content h1,
+html.light .dark-card-content h2,
+html.light .dark-card-content h3,
+html.light .dark-card-content h4 {
+  color: #faf6ed !important;
+}
+html.light .dark-card-content p {
+  color: #d4cfc5 !important;
+}
+html.light .dark-card-content span:not([class*="text-\[\#c5a880\]"]) {
+  color: #faf6ed !important;
+}
+html.light .dark-card-content .text-\[\#c5a880\],
+html.light .dark-card-content [class*="text-\[\#c5a880\]"] {
+  color: #e5cb9f !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-bg-deep);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--color-bg-deep);
+  color: var(--color-text-main);
+}
+
+/* Typography Helpers */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Subtle Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090a0b;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(197, 168, 128, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(197, 168, 128, 0.5);
+}
+
+/* Gold Text Shimmer & Gradients */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #edd8b7 40%, #c5a880 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-accent-text {
+  color: var(--color-accent-gold);
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(16, 17, 20, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+}
+
+.glass-nav {
+  background: rgba(9, 10, 11, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Subtle Glows */
+.gold-glow {
+  box-shadow: 0 0 40px rgba(197, 168, 128, 0.12);
+}
+
+/* Hero Scroll Track & Video Container */
+.hero-scroll-container {
+  position: relative;
+  width: 100%;
+  height: 320vh;
+  background: #000;
+}
+
+.hero-sticky-stage {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Animated Scroll indicator pulse */
+@keyframes scrollPulse {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 0.2;
+  }
+}
+
+.animate-scroll-pulse {
+  animation: scrollPulse 2.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+/* Micro-interaction buttons */
+.luxury-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.25rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #0c0d0e;
+  background: #f4eee2;
+  border: 1px solid rgba(197, 168, 128, 0.4);
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.luxury-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.6s ease;
+}
+
+.luxury-btn:hover {
+  background: #c5a880;
+  color: #090a0b;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(197, 168, 128, 0.3);
+}
+
+.luxury-btn:hover::before {
+  left: 100%;
+}
+
+.luxury-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 2rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f3efe6;
+  background: transparent;
+  border: 1px solid rgba(243, 239, 230, 0.3);
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  text-decoration: none;
+}
+
+.luxury-btn-outline:hover {
+  border-color: #c5a880;
+  color: #c5a880;
+  background: rgba(197, 168, 128, 0.08);
+}
+
+/* ==========================================================================
+   ULTRA-LUXURY ANIMATION SUITE
+   ========================================================================== */
+
+/* Carousel Progress Fill */
+@keyframes carouselProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Bell Swing Physics */
+@keyframes bellSwing {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(18deg); }
+  40% { transform: rotate(-16deg); }
+  60% { transform: rotate(10deg); }
+  80% { transform: rotate(-6deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Radar & Compass Sweep */
+@keyframes radarSweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar-sweep {
+  animation: radarSweep 14s linear infinite;
+}
+
+/* Marine Wave Oscillation */
+@keyframes waveFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.02);
+  }
+}
+
+.animate-wave-float {
+  animation: waveFloat 5s ease-in-out infinite;
+}
+
+/* Floating Ambient Levitation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 6s ease-in-out infinite;
+}
+
+/* Pulse Gold Glow */
+@keyframes goldGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(197, 168, 128, 0.15), inset 0 0 15px rgba(197, 168, 128, 0.08);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(197, 168, 128, 0.4), inset 0 0 30px rgba(197, 168, 128, 0.2);
+  }
+}
+
+.animate-gold-glow {
+  animation: goldGlowPulse 4s ease-in-out infinite;
+}
+
+/* Audio Visualizer Equalizer */
+@keyframes audioJump {
+  0%, 100% {
+    height: 6px;
+  }
+  50% {
+    height: 32px;
+  }
+}
+
+.audio-bar-1 { animation: audioJump 0.8s ease-in-out infinite; }
+.audio-bar-2 { animation: audioJump 1.1s ease-in-out infinite 0.2s; }
+.audio-bar-3 { animation: audioJump 0.7s ease-in-out infinite 0.4s; }
+.audio-bar-4 { animation: audioJump 1.3s ease-in-out infinite 0.1s; }
+.audio-bar-5 { animation: audioJump 0.9s ease-in-out infinite 0.3s; }
+.audio-bar-6 { animation: audioJump 1.2s ease-in-out infinite 0.5s; }
+
+/* Metallic Shimmer Gradient */
+@keyframes shimmerText {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #c5a880 0%,
+    #ffffff 25%,
+    #e5cb9f 50%,
+    #c5a880 75%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerText 6s linear infinite;
+}
+
+/* Metallic Shimmer Gradient in Light Theme: Deep Bronze, Warm Gold & Charcoal */
+html.light .animate-shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #634720 0%,
+    #1c1917 25%,
+    #8f6a35 50%,
+    #1c1917 75%,
+    #634720 100%
+  ) !important;
+  background-size: 200% auto !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* If ShinyText is inside a dark element, dark hero, or unscrolled header banner, keep radiant gold/white shimmer */
+html.light #hero .animate-shimmer-text,
+html.light [class*="bg-black/"] .animate-shimmer-text,
+html.light .parallax-editorial-copy .animate-shimmer-text,
+html.light header.header-top .animate-shimmer-text,
+html.light header:not(.header-scrolled) .animate-shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #c5a880 0%,
+    #ffffff 25%,
+    #e5cb9f 50%,
+    #c5a880 75%,
+    #ffffff 100%
+  ) !important;
+  background-size: 200% auto !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* Luxury Interactive Glass Card with Ambient Light */
+.luxury-card-interactive {
+  position: relative;
+  background: radial-gradient(circle at 50% 0%, rgba(25, 27, 33, 0.9) 0%, rgba(13, 14, 18, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.luxury-card-interactive::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(197, 168, 128, 0.6), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.luxury-card-interactive:hover {
+  transform: translateY(-6px);
+  border-color: rgba(197, 168, 128, 0.4);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 30px rgba(197, 168, 128, 0.15);
+}
+
+.luxury-card-interactive:hover::after {
+  opacity: 1;
+}
+
+/* Slow Ambient Breathing Glow for Watermark in Dark Theme */
+@keyframes slowPulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 0px rgba(197, 168, 128, 0));
+    -webkit-text-stroke: 1px rgba(197, 168, 128, 0.08);
+    color: rgba(255, 255, 255, 0.015);
+  }
+  50% {
+    opacity: 0.88;
+    filter: drop-shadow(0 0 30px rgba(197, 168, 128, 0.3)) drop-shadow(0 0 10px rgba(197, 168, 128, 0.15));
+    -webkit-text-stroke: 1.2px rgba(197, 168, 128, 0.26);
+    color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* Slow Ambient Breathing Glow for Watermark in Light Theme: Balanced Warm Gold Glow */
+@keyframes slowPulseGlowLight {
+  0%, 100% {
+    opacity: 0.22;
+    filter: drop-shadow(0 0 4px rgba(197, 168, 128, 0.12));
+    -webkit-text-stroke: 1.1px rgba(143, 106, 53, 0.18);
+    color: transparent;
+  }
+  50% {
+    opacity: 0.58;
+    filter: drop-shadow(0 0 18px rgba(197, 168, 128, 0.38)) drop-shadow(0 0 6px rgba(143, 106, 53, 0.2));
+    -webkit-text-stroke: 1.4px rgba(143, 106, 53, 0.34);
+    color: rgba(197, 168, 128, 0.04);
+  }
+}
+
+.animate-glow-pulse {
+  animation: slowPulseGlow 6s ease-in-out infinite;
+}
+
+html.light .animate-glow-pulse {
+  animation: slowPulseGlowLight 6s ease-in-out infinite !important;
+}
+
+/* =========================================================================
+   LIVE RIVIERA COASTAL TELEMETRY & OBSERVATORY ANIMATIONS
+   ========================================================================= */
+
+/* 1. Background Coastal Atmosphere Gradients */
+@keyframes coastalMeshFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.bg-coastal-mesh-light {
+  background: linear-gradient(120deg, #f8f5ee 0%, #ede6d8 30%, #f4ede0 65%, #faf7f0 100%);
+  background-size: 240% 240%;
+  animation: coastalMeshFlow 16s ease-in-out infinite;
+}
+
+.bg-coastal-mesh-dark {
+  background: linear-gradient(120deg, #090b0e 0%, #12151c 30%, #0d0f14 65%, #080a0c 100%);
+  background-size: 240% 240%;
+  animation: coastalMeshFlow 16s ease-in-out infinite;
+}
+
+/* 2. Observatory Radar Scanner Sweep */
+@keyframes radarSweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-radar-sweep {
+  animation: radarSweep 6s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spinReverse 24s linear infinite;
+}
+
+/* 3. Concentric Radar Ping Waves */
+@keyframes radarPingRing {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+.animate-radar-ping {
+  animation: radarPingRing 2.4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+}
+
+/* 4. Mediterranean Wind Gust & Breeze Drift */
+@keyframes windGust {
+  0%, 100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(3px) rotate(5deg);
+  }
+  75% {
+    transform: translateX(-2px) rotate(-4deg);
+  }
+}
+
+.animate-wind-gust {
+  animation: windGust 4.5s ease-in-out infinite;
+}
+
+@keyframes windStream {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-wind-stream {
+  animation: windStream 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* 5. Celestial Sun Corona Pulse */
+@keyframes sunCoronaPulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 4px rgba(217, 119, 6, 0.25));
+  }
+  50% {
+    transform: scale(1.12) rotate(180deg);
+    filter: drop-shadow(0 0 10px rgba(217, 119, 6, 0.55));
+  }
+}
+
+.animate-sun-corona {
+  animation: sunCoronaPulse 8s ease-in-out infinite;
+}
+
+/* 6. Live Audio Equalizer Frequency Bars */
+@keyframes audioWave1 {
+  0%, 100% { height: 4px; }
+  50% { height: 16px; }
+}
+@keyframes audioWave2 {
+  0%, 100% { height: 15px; }
+  50% { height: 5px; }
+}
+@keyframes audioWave3 {
+  0%, 100% { height: 7px; }
+  50% { height: 18px; }
+}
+@keyframes audioWave4 {
+  0%, 100% { height: 16px; }
+  50% { height: 6px; }
+}
+@keyframes audioWave5 {
+  0%, 100% { height: 9px; }
+  50% { height: 14px; }
+}
+
+.audio-bar-1 { animation: audioWave1 0.75s ease-in-out infinite; }
+.audio-bar-2 { animation: audioWave2 0.65s ease-in-out infinite 0.12s; }
+.audio-bar-3 { animation: audioWave3 0.85s ease-in-out infinite 0.25s; }
+.audio-bar-4 { animation: audioWave4 0.7s ease-in-out infinite 0.08s; }
+.audio-bar-5 { animation: audioWave5 0.8s ease-in-out infinite 0.18s; }
+
+/* 7. Ocean Wave Micro Undulation */
+@keyframes waveUndulate {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-wave-undulate {
+  animation: waveUndulate 6s linear infinite;
+}
+
+/* 8. Shimmer Sweep Across Telemetry Horizon */
+@keyframes horizonShimmer {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+.animate-horizon-shimmer {
+  animation: horizonShimmer 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* =========================================================================
+   ARCHITECTURAL SOUL & HAUTE CRAFTSMANSHIP ATELIER ANIMATIONS
+   ========================================================================= */
+
+@keyframes specularShimmer {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.animate-specular-shimmer {
+  animation: specularShimmer 5.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes blueprintScan {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateY(12px);
+    opacity: 0.45;
+  }
+}
+
+.animate-blueprint-scan {
+  animation: blueprintScan 4s ease-in-out infinite;
+}
+
+@keyframes borderTraceGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.animate-border-trace {
+  background: linear-gradient(90deg, #c5a880, #e5cb9f, #8f6a35, #c5a880);
+  background-size: 200% 100%;
+  animation: borderTraceGlow 3.5s linear infinite;
+}
+
+/* =========================================================================
+   RECOGNITION & HONORS (CRITICALLY ACCLAIMED) PRESTIGE ANIMATIONS
+   ========================================================================= */
+
+@keyframes starTwinkle {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.85;
+    filter: drop-shadow(0 0 2px rgba(197, 168, 128, 0.4));
+  }
+  50% {
+    transform: scale(1.22) rotate(12deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(197, 168, 128, 0.95)) drop-shadow(0 0 14px rgba(229, 203, 159, 0.6));
+  }
+}
+
+.animate-star-twinkle {
+  animation: starTwinkle 2.8s ease-in-out infinite;
+}
+
+@keyframes accoladeShimmer {
+  0% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(180%);
+    opacity: 0;
+  }
+}
+
+.animate-accolade-shimmer {
+  animation: accoladeShimmer 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 4.5s ease-in-out infinite;
+}
+
